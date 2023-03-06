@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+#wrap{
+    width: 1920px;
+    margin: 0 auto;
+}
+.way{
+    width: 1320px;
+    height: 40px;
+}
+.way ul li{
+    float: left;
+    color: #d3d3d3;
+}
+.way ul li img{
+    color: #d3d3d3;
+}
+.way ul li:first-child::after{
+    content:" >";
+    color: #d3d3d3;
+}
+.way ul li:nth-child(2)::after{
+    content:" > 지속가능경영 체계";
+    color: #d3d3d3;
+}
+#box1{
+    margin: 0 300px;
+}
+h1{
+    width: 1320px;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.com_navi li{
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+.com_navi li:first-child{
+    margin-left: 0;
+}
+.com_navi li:first-child a{
+    color: #fff;
+    display: block;
+    background-color: red;
+}
+.com_navi li a{
+    color: #000;
+    display: block;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #fbfbfb;
+    background-color: #f1f1f1;
+    border-radius: 50px;
+}
+.com_navi li a:hover{
+    color: #fff;
+    display: block;
+    background-color: red;
+}
+.container1{
+    clear: both;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+.container1 h4, .container1 p{
+    text-align: center;
+    font-weight: bold;
+}
+.container1 h4{
+    color: red;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.container1 p{
+    font-size: 20px;
+    line-height: 25px;
+}
