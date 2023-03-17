@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>3개의 막대그래프</title>
+	<style>
+		.bar_wrap {
+      border: 1px solid red;
+      width: 390px;
+      height: 150px;
+			display: flex;
+			align-items: flex-end;
+		}
+
+		.bar {
+			width: 50px;
+			margin: 0 40px;
+			background-color: #ccc;
+			position: relative;
+			height: 0;
+			animation: grow 1s ease-out forwards;
+		}
+.year{
+  width: 390px;
+  height: 30px;
+  border: 1px solid blue;
+}
+.year p{
+  float: left;
+  margin: 0 40px;
+}
+
+
+
+		.bar_text {
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 20px;
+		}
+
+		.bar_text::after {
+			content: attr(data-value);
+		}
+
+		@keyframes grow {
+			from {
+				height: 0;
+			}
+			to {
+				height: calc(var(--value) * 1px);
+			}
+		}
+
+
+    .asd{
+      
+    }
+
+
+
+
+	</style>
+</head>
+<body>
+  <div class="asd">
+	<div class="bar_wrap">
+		<div class="bar" style="--value: 50;">
+			<div class="bar_text" data-value="6,849"></div> 
+		</div>
+    <!-- <p>2019</p> -->
+		<div class="bar" style="--value: 60;">
+			<div class="bar_text" data-value="7,641"></div>
+		</div>
+    <!-- <p>2020</p> -->
+		<div class="bar" style="--value: 59;">
+			<div class="bar_text" data-value="7,602"></div> 
+		</div>
+    <!-- <p>2021</p> -->
+	</div><!-- bar_wrap -->
+  <div class="year">
+    <p>2019</p>
+    <p>2020</p>
+    <p>2021</p>
+  </div><!-- year -->
+</div><!-- asd -->
+</body>
+</html>

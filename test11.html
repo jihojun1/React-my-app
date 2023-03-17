@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navi4_1.css">
+    <title>투자정보</title>
+</head>
+<style>
+    @charset "utf-8";
+
+    #wrap {
+        width: 1920px;
+        margin: 0 auto;
+    }
+
+    .way {
+        width: 1320px;
+        height: 40px;
+    }
+
+    .way ul li {
+        float: left;
+        color: #d3d3d3;
+    }
+
+    .way ul li img {
+        color: #d3d3d3;
+    }
+
+    .way ul li:first-child::after {
+        content: " >";
+        color: #d3d3d3;
+    }
+
+    .way ul li:nth-child(2)::after {
+        content: " > 재무정보";
+        color: #d3d3d3;
+    }
+
+    #box1 {
+        margin: 0 300px;
+    }
+
+    h1 {
+        width: 1320px;
+        font-size: 50px;
+        margin-bottom: 50px;
+        font-family: 'Binggrae';
+    }
+
+    .com_navi li {
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+
+    .com_navi li:first-child {
+        margin-left: 0;
+    }
+
+    .com_navi li:first-child a {
+        color: #fff;
+        display: block;
+        background-color: red;
+    }
+
+    .com_navi li a {
+        color: #000;
+        display: block;
+        width: 180px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #fbfbfb;
+        background-color: #f1f1f1;
+        border-radius: 50px;
+    }
+
+    .com_navi li a:hover {
+        color: #fff;
+        display: block;
+        background-color: red;
+    }
+
+    .container1 {
+        clear: both;
+        padding-top: 30px;
+        padding-bottom: 100px;
+    }
+
+    .container1 h4,
+    .container1 p {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .container1 h4 {
+        color: #000;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-family: 'Binggrae';
+        font-size: 35px;
+    }
+
+    .container1 p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .container1 ul {
+        border: 1px solid #eaeaea;
+        border-radius: 30px;
+        line-height: 50px;
+        width: 300px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container1 ul li {
+        float: left;
+        font-size: 15px;
+        margin-left: 35px;
+    }
+
+    .container1 ul li:first-child a {
+        border-right: 1px solid #eaeaea;
+        padding-right: 35px;
+    }
+
+    .container1 ul li a {
+        color: #000;
+    }
+
+
+
+
+
+
+
+
+    .container2 {
+        text-align: center;
+    }
+
+    .container2>h4 {
+        font-size: 30px;
+        margin-bottom: 30px;
+        font-family: 'Binggrae';
+    }
+
+    .container2 .asset {
+        background-color: #f3f6e0;
+        margin-left: 30px;
+    }
+
+    .container2 .debt {
+        background-color: #eff6fa;
+    }
+
+    .container2 .capital {
+        background-color: #fcf4e5;
+    }
+
+    .total_box div {
+        border-radius: 30px;
+        width: 400px;
+        height: 150px;
+        float: left;
+        margin-right: 30px;
+        position: relative;
+        margin-bottom: 150px;
+    }
+
+    .total_box div:last-child {
+        margin-right: 0;
+    }
+
+    .total_box div h4 {
+        margin: 30px 0 15px 0;
+    }
+
+    .total_box div .counter {
+        font-size: 50px;
+    }
+
+    .total_box div span {
+        font-size: 15px;
+
+    }
+
+    .won {
+        position: absolute;
+        top: 85px;
+        left: 255px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+
+
+
+
+    .bar_wrap {
+        width: 400px;
+        border-bottom: 1px solid #eaeaea;
+        display: flex;
+        align-items: flex-end;
+        height: 150px;
+    }
+
+
+    .bar {
+        width: 50px;
+        margin-right: 30px;
+        background-color: #ccc;
+        position: relative;
+        left: 95px;
+        height: 0;
+        animation: grow 1s ease-out forwards;
+    }
+
+    .bar:last-child {
+        margin-right: 0;
+    }
+
+    .bar_text {
+        position: absolute;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 15px;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        width: 60px;
+        text-align: center;
+        color: red;
+    }
+
+    .bar_text::after {
+        content: attr(data-value);
+    }
+
+    @keyframes grow {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: calc(var(--value) * 1px);
+        }
+    }
+
+    .graph_wrap {
+        border: 1px solid #eaeaea;
+        width: 1320px;
+        height: 260px;
+        border-radius: 30px;
+        margin-bottom: 200px;
+    }
+
+    .bar_wrap h4 {
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        width: 370px;
+        height: 20px;
+    }
+
+
+    .year1 {
+        width: 400px;
+        height: 30px;
+        margin: 0 auto;
+    }
+
+    .year1 p {
+        float: left;
+        margin-right: 45px;
+    }
+
+    .year1 p:first-child {
+        margin-left: 102px;
+    }
+
+    .box_total {
+        border: 1px solid #eaeaea;
+        border-radius: 30px;
+        width: 400px;
+        height: 200px;
+        float: left;
+        margin-top: 30px;
+        margin-left: 30px;
+        position: relative;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .sheet {
+        clear: both;
+        width: 1320px;
+        height: 800px;
+    }
+
+    .sheet_head {
+        width: 1320px;
+        height: 20px;
+        margin-bottom: 50px;
+    }
+
+    .sheet_head h4 {
+        font-size: 40px;
+        float: left;
+        font-family: 'Binggrae';
+    }
+
+    .sheet_head p {
+        margin-top: 40px;
+        float: right;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .table_box {
+        width: 1320px;
+        height: 672px;
+        text-align: center;
+        color: #595c59;
+    }
+
+    .table_box tr {
+        width: 1320px;
+        height: 84px;
+        border: 1px solid #eaeaea;
+        font-size: 18px;
+    }
+
+    .table_box tr {
+        line-height: 84px;
+    }
+
+    .year {
+        line-height: 100%;
+    }
+
+    .line2 {
+        color: #1f1f1f;
+        font-weight: bold;
+    }
+
+    .detail {
+        font-size: 14px;
+        color: #8f8f8f;
+        line-height: 20px;
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <div id="box1">
+            <div class="way">
+                <ul>
+                    <li><img src="images/home_img.png" alt="홈 이미지" width="12" height="12"></li>
+                    <li>투자정보</li>
+                </ul>
+            </div><!-- way -->
+            <h1>투자정보</h1>
+            <ul class="com_navi">
+                <li><a href="navi4_1.html">재무정보</a></li>
+                <!-- <li><a href="navi1_2.html">경영이념</a></li>
+                    <li><a href="navi1_3.html">사업분야</a></li> -->
+            </ul><!--com_navi-->
+            <div id="head">
+                <div class="container1">
+                    <h4>재무정보</h4>
+                    <ul>
+                        <li><a href="#">재무상태표</a></li>
+                        <li><a href="#">손익계산서</a></li>
+                    </ul>
+                </div><!-- container1 -->
+                <div class="container2">
+                    <h4>2021년 현황</h4>
+                    <div class="total_box">
+                        <div class="asset">
+                            <h4>자산총계</h4>
+                            <p class="counter" id="counter1">7,602</p>
+                            <p class="won">억원</p>
+                        </div><!-- asset -->
+                        <div class="debt">
+                            <h4>부채총계</h4>
+                            <p class="counter" id="counter2">2,023</p>
+                            <p class="won">억원</p>
+                        </div><!-- debt -->
+                        <div class="capital">
+                            <h4>자본총계</h4>
+                            <p class="counter" id="counter3">5,578</p>
+                            <p class="won">억원</p>
+                        </div><!-- capital -->
+                    </div><!-- total_box -->
+                </div><!--container2-->
+            </div><!--head-->
+
+
+            <div class="graph_wrap">
+                <p>단위:억원</p>
+                <div class="asd">
+                    <div class="box_total">
+                        <div class="bar_wrap">
+                            <h4>자산총계</h4>
+                            <div class="bar" style="--value: 50;">
+                                <div class="bar_text" data-value="6,849"></div>
+                            </div>
+                            <div class="bar" style="--value: 60;">
+                                <div class="bar_text" data-value="7,641"></div>
+                            </div>
+                            <div class="bar" style="--value: 59;">
+                                <div class="bar_text" data-value="7,602"></div>
+                            </div>
+                        </div><!-- bar_wrap -->
+                        <div class="year1">
+                            <p>2019</p>
+                            <p>2020</p>
+                            <p>2021</p>
+                        </div>
+                    </div><!-- box_total -->
+                    <div class="box_total">
+                        <div class="bar_wrap">
+                            <h4>부채총계</h4>
+                            <div class="bar" style="--value: 30;">
+                                <div class="bar_text" data-value="1,137"></div>
+                            </div>
+                            <div class="bar" style="--value: 50;">
+                                <div class="bar_text" data-value="1,746"></div>
+                            </div>
+                            <div class="bar" style="--value: 65;">
+                                <div class="bar_text" data-value="2,023"></div>
+                            </div>
+                        </div><!-- bar_wrap -->
+                        <div class="year1">
+                            <p>2019</p>
+                            <p>2020</p>
+                            <p>2021</p>
+                        </div>
+                    </div><!-- box_total -->
+                    <div class="box_total">
+                        <div class="bar_wrap">
+                            <h4>자본총계</h4>
+                            <div class="bar" style="--value: 58;">
+                                <div class="bar_text" data-value="5,711"></div>
+                            </div>
+                            <div class="bar" style="--value: 60;">
+                                <div class="bar_text" data-value="5,895"></div>
+                            </div>
+                            <div class="bar" style="--value: 55;">
+                                <div class="bar_text" data-value="5,578"></div>
+                            </div>
+                        </div><!-- bar_wrap -->
+                        <div class="year1">
+                            <p>2019</p>
+                            <p>2020</p>
+                            <p>2021</p>
+                        </div>
+                    </div><!-- box_total -->
+                </div><!-- asd -->
+            </div><!-- graph_wrap -->
+
+
+
+
+            <div class="sheet">
+                <div class="sheet_head">
+                    <h4>재무상태표</h4>
+                    <p>단위:백만원</p>
+                </div><!-- sheet_head -->
+                <table class="table_box">
+                    <tr class="line1">
+                        <th>구분</th>
+                        <th class="year">2019<br>(제54기)</th>
+                        <th class="year">2020<br>(제55기)</th>
+                        <th class="year">2021<br>(제56기)</th>
+                    </tr>
+                    <tr>
+                        <th>유동자산</th>
+                        <td>405,146</td>
+                        <td>325,348</td>
+                        <td>313,908</td>
+                    </tr>
+                    <tr>
+                        <th>비유동자산</th>
+                        <td>279,777</td>
+                        <td>438,791</td>
+                        <td>446,337</td>
+                    </tr>
+                    <tr class="line2">
+                        <th>자산총계</th>
+                        <td>684,923</td>
+                        <td>764,138</td>
+                        <td>760,245</td>
+                    </tr>
+                    <tr>
+                        <th>유동부채</th>
+                        <td>94,291</td>
+                        <td>126,325</td>
+                        <td>160,011</td>
+                    </tr>
+                    <tr>
+                        <th>비유동부채</th>
+                        <td>19,492</td>
+                        <td>48,283</td>
+                        <td>42,358</td>
+                    </tr>
+                    <tr class="line2">
+                        <th>부채총계</th>
+                        <td>113,783</td>
+                        <td>174,607</td>
+                        <td>202,369</td>
+                    </tr>
+                    <tr class="line2">
+                        <th>자본총계</th>
+                        <td>571,140</td>
+                        <td>589,531</td>
+                        <td>557,876</td>
+                    </tr>
+                </table>
+                <div class="detail">
+                    * 상기 연결재무제표의 내용은 한국채택국제회계기준(K-IFRS)에 따라 작성된 연결기준 재무정보로 작성되었습니다.<br>
+                    * 자세한 내용은 전자공시시스템(http://dart.fss.or.kr/)의 당사 정기공시 내용을 참고하시기 바랍니다.
+                </div><!-- detail -->
+            </div><!-- sheet -->
+
+
+        </div><!-- box1 -->
+    </div><!--wrap-->
+
+
+
+    <script>
+        function startCounter(elementId, endValue) {
+            let startValue = 0;
+            let duration = 3000;
+            let interval = setInterval(() => {
+                let currentValue = startValue + (endValue - startValue) * (Date.now() - startTime) / duration;
+                if (currentValue >= endValue) {
+                    currentValue = endValue;
+                    clearInterval(interval);
+                }
+                document.getElementById(elementId).textContent = Math.round(currentValue);
+            }, 10);
+            let startTime = Date.now();
+        }
+
+        window.onload = function () {
+            startCounter("counter1", 7602);
+            startCounter("counter2", 2023);
+            startCounter("counter3", 5578);
+        };
+    </script>
+
+
+
+
+</body>
+
+</html>

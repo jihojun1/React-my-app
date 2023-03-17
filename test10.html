@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navi4_1.css">
+    <title>투자정보</title>
+</head>
+
+<style>
+
+
+        .bar_wrap {
+            width: 400px;
+            border-bottom: 1px solid #eaeaea;
+			display: flex;
+			align-items: flex-end;
+			height: 150px;
+		}
+
+
+		.bar {
+			width: 50px;
+			margin-right: 30px;
+			background-color: #ccc;
+			position: relative;
+            left: 95px;
+			height: 0;
+			animation: grow 1s ease-out forwards;
+            
+		}
+     
+        .bar:last-child{
+            margin-right: 0;
+        }
+
+		.bar_text {
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 20px;
+		}
+
+		.bar_text::after {
+			content: attr(data-value);
+		}
+
+		@keyframes grow {
+			from {
+				height: 0;
+			}
+			to {
+				height: calc(var(--value) * 1px);
+			}
+		}
+
+.graph_wrap{
+    border: 1px solid #eaeaea;
+    width: 1320px;
+    height: 260px;
+    border-radius: 30px;
+    border-radius: 30px;
+}
+.bar_wrap h4{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    width: 370px;
+    height: 20px;
+}
+
+
+.year1{
+    width: 400px;
+    height: 30px;
+    margin: 0 auto;
+}
+.year1 p{
+    float: left;
+    margin-right: 45px;
+}
+.year1 p:first-child{
+    margin-left: 102px;
+}
+
+.box_total{
+    border: 1px solid #eaeaea;
+    border-radius: 30px;
+    width: 400px;
+    height: 200px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: relative;
+}
+</style>
+
+<body>
+    <div id="wrap">
+        <div id="box1">
+   
+
+            <div class="graph_wrap">
+                <p>단위:억원</p>
+                <div class="asd">
+                <div class="box_total">
+                    <div class="bar_wrap">
+                            <h4>자산총계</h4>
+                        <div class="bar" style="--value: 50;">
+                            <div class="bar_text" data-value="6,849"></div> 
+                        </div>
+                        <div class="bar" style="--value: 60;">
+                            <div class="bar_text" data-value="7,641"></div>
+                        </div>
+                        <div class="bar" style="--value: 59;">
+                            <div class="bar_text" data-value="7,602"></div> 
+                        </div>
+                    </div><!-- bar_wrap -->
+                    <div class="year1">
+                        <p>2019</p>
+                        <p>2020</p>
+                        <p>2021</p>
+                    </div>
+                </div><!-- box_total -->
+                <div class="box_total">
+                    <div class="bar_wrap">
+                            <h4>부채총계</h4>
+                        <div class="bar" style="--value: 30;">
+                            <div class="bar_text" data-value="1,137"></div> 
+                        </div>
+                        <div class="bar" style="--value: 50;">
+                            <div class="bar_text" data-value="1,746"></div>
+                        </div>
+                        <div class="bar" style="--value: 65;">
+                            <div class="bar_text" data-value="2,023"></div> 
+                        </div>
+                    </div><!-- bar_wrap -->
+                    <div class="year1">
+                        <p>2019</p>
+                        <p>2020</p>
+                        <p>2021</p>
+                    </div>
+                </div><!-- box_total -->
+                <div class="box_total">
+                    <div class="bar_wrap">
+                            <h4>자본총계</h4>
+                        <div class="bar" style="--value: 58;">
+                            <div class="bar_text" data-value="5,711"></div> 
+                        </div>
+                        <div class="bar" style="--value: 60;">
+                            <div class="bar_text" data-value="5,895"></div>
+                        </div>
+                        <div class="bar" style="--value: 55;">
+                            <div class="bar_text" data-value="5,578"></div> 
+                        </div>
+                    </div><!-- bar_wrap -->
+                    <div class="year1">
+                        <p>2019</p>
+                        <p>2020</p>
+                        <p>2021</p>
+                    </div>
+                </div><!-- box_total -->
+            </div><!-- asd -->
+            </div><!-- graph_wrap -->
+
+
+
+      
+
+
+        </div><!-- box1 -->
+    </div><!--wrap-->
+
+
+
+    <script>
+        function startCounter(elementId, endValue) {
+            let startValue = 0;
+            let duration = 3000;
+            let interval = setInterval(() => {
+                let currentValue = startValue + (endValue - startValue) * (Date.now() - startTime) / duration;
+                if (currentValue >= endValue) {
+                    currentValue = endValue;
+                    clearInterval(interval);
+                }
+                document.getElementById(elementId).textContent = Math.round(currentValue);
+            }, 10);
+            let startTime = Date.now();
+        }
+
+        window.onload = function () {
+            startCounter("counter1", 7602);
+            startCounter("counter2", 2023);
+            startCounter("counter3", 5578);
+        };
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -30,6 +30,7 @@ h1{
     width: 1320px;
     font-size: 50px;
     margin-bottom: 50px;
+    font-family: 'Binggrae';
 }
 .com_navi li{
     float: left;
@@ -129,6 +130,7 @@ h1{
 .txtbox h3{
     font-size: 30px;
     margin-bottom: 25px;
+    font-family: 'Binggrae';
 }
 .txtbox .s_txt{
     line-height: 30px;

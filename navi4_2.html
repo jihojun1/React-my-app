@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navi4_2.css">
+    <title>투자정보</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="box1">
+            <div class="way">
+                <ul>
+                    <li><img src="images/home_img.png" alt="홈 이미지" width="12" height="12"></li>
+                    <li>투자정보</li>
+                </ul>
+            </div><!-- way -->
+            <h1>투자정보</h1>
+            <ul class="com_navi">
+                <li><a href="navi4_1.html">재무정보</a></li>
+                <!-- <li><a href="navi1_2.html">경영이념</a></li>
+                    <li><a href="navi1_3.html">사업분야</a></li> -->
+            </ul><!--com_navi-->
+            <div id="head">
+                <div class="container1">
+                    <h4>재무정보</h4>
+                    <ul>
+                        <li><a href="navi4_1.html">재무상태표</a></li>
+                        <li><a href="navi4_2.html">손익계산서</a></li>
+                    </ul>
+                </div><!-- container1 -->
+                <div class="container2">
+                    <h4>2021년 현황</h4>
+                    <div class="total_box">
+                        <div class="asset">
+                            <h4>매출액</h4>
+                            <p class="counter" id="counter1">9544</p>
+                            <p class="won">억원</p>
+                        </div><!-- asset -->
+                        <div class="debt">
+                            <h4>영업이익</h4>
+                            <p class="counter" id="counter2">584</p>
+                            <p class="won">억원</p>
+                        </div><!-- debt -->
+                        <div class="capital">
+                            <h4>당기순이익</h4>
+                            <p class="counter" id="counter3">159</p>
+                            <p class="won">억원</p>
+                        </div><!-- capital -->
+                    </div><!-- total_box -->
+                </div><!--container2-->
+            </div><!--head-->
+
+
+            <div class="graph_wrap">
+                <p>단위:억원</p>
+              
+                    <div class="box_total">
+                        <div class="bar_wrap">
+                            <h4>자산총계</h4>
+                            <div class="bar" style="--value: 45;">
+                                <div class="bar_text" data-value="8783"></div>
+                            </div>
+                            <div class="bar" style="--value: 60;">
+                                <div class="bar_text" data-value="9591"></div>
+                            </div>
+                            <div class="bar" style="--value: 61;">
+                                <div class="bar_text" data-value="9544"></div>
+                            </div>
+                        </div><!-- bar_wrap -->
+                        <div class="year1">
+                            <p>2019</p>
+                            <p>2020</p>
+                            <p>2021</p>
+                        </div>
+                    </div><!-- box_total -->
+                    <div class="box_total">
+                        <div class="bar_wrap">
+                            <h4>부채총계</h4>   
+                            <div class="bar" style="--value: 55;">
+                                <div class="bar_text" data-value="693"></div>
+                            </div>
+                            <div class="bar" style="--value: 50;">
+                                <div class="bar_text" data-value="620"></div>
+                            </div>
+                            <div class="bar" style="--value: 51;">
+                                <div class="bar_text" data-value="584"></div>
+                            </div>
+                        </div><!-- bar_wrap -->
+                        <div class="year1">
+                            <p>2019</p>
+                            <p>2020</p>
+                            <p>2021</p>
+                        </div>
+                    </div><!-- box_total -->
+                    <div class="box_total">
+                        <div class="bar_wrap">
+                            <h4>자본총계</h4>
+                            <div class="bar" style="--value: 55;">
+                                <div class="bar_text" data-value="412"></div>
+                            </div>
+                            <div class="bar" style="--value: 50;">
+                                <div class="bar_text" data-value="309"></div>
+                            </div>
+                            <div class="bar" style="--value: 40;">
+                                <div class="bar_text" data-value="159"></div>
+                            </div>
+                        </div><!-- bar_wrap -->
+                        <div class="year1">
+                            <p>2019</p>
+                            <p>2020</p>
+                            <p>2021</p>
+                        </div>
+                    </div><!-- box_total -->
+
+            </div><!-- graph_wrap -->
+
+
+
+
+            <div class="sheet">
+                <div class="sheet_head">
+                    <h4>손익계산서</h4>
+                    <p>단위:백만원</p>
+                </div><!-- sheet_head -->
+                <table class="table_box">
+                    <tr class="line1">
+                        <th>구분</th>
+                        <th class="year2">2019<br>(제54기)</th>
+                        <th class="year2">2020<br>(제55기)</th>
+                        <th class="year2">2021<br>(제56기)</th>
+                    </tr>
+                    <tr class="line2">
+                        <th>매출액</th>
+                        <td>878,334</td>
+                        <td>959,129</td>
+                        <td>1,147,435</td>
+                    </tr>
+                    <tr>
+                        <th>매출원가</th>
+                        <td>647,116</td>
+                        <td>698,382</td>
+                        <td>845,555</td>
+                    </tr>
+                    <tr>
+                        <th>매출총이익</th>
+                        <td>231,219</td>
+                        <td>260,747</td>
+                        <td>301,880</td>
+                    </tr>
+                    <tr>
+                        <th>판매비와 관리비</th>
+                        <td>185,436</td>
+                        <td>220,900</td>
+                        <td>275,637</td>
+                    </tr>
+                    <tr class="line2">
+                        <th>영업이익</th>
+                        <td>45,782</td>
+                        <td>39,847</td>
+                        <td>26,244</td>
+                    </tr>
+                    <tr>
+                        <th>법인세비용차감전순이익</th>
+                        <td>53,103</td>
+                        <td>47,513</td>
+                        <td>11,799</td>
+                    </tr>
+                    <tr class="line2">
+                        <th>당기순이익</th>
+                        <td>41,058</td>
+                        <td>34,876</td>
+                        <td>19,327</td>
+                    </tr>
+                </table>
+                <div class="detail">
+                    * 상기 연결재무제표의 내용은 한국채택국제회계기준(K-IFRS)에 따라 작성된 연결기준 재무정보로 작성되었습니다.<br>
+                    * 자세한 내용은 전자공시시스템(http://dart.fss.or.kr/)의 당사 정기공시 내용을 참고하시기 바랍니다.
+                </div><!-- detail -->
+            </div><!-- sheet -->
+
+
+        </div><!-- box1 -->
+    </div><!--wrap-->
+
+
+
+    <script>
+         function startCounter(elementId, endValue) {
+            let startValue = 0;
+            let duration = 3000;
+            let interval = setInterval(() => {
+                let currentValue = startValue + (endValue - startValue) * (Date.now() - startTime) / duration;
+                if (currentValue >= endValue) {
+                    currentValue = endValue;
+                    clearInterval(interval);
+                }
+                document.getElementById(elementId).textContent = Math.round(currentValue);
+            }, 10);
+            let startTime = Date.now();
+        }
+
+        window.onload = function () {
+            startCounter("counter1", 7602);
+            startCounter("counter2", 2023);
+            startCounter("counter3", 5578);
+        };
+
+
+
+       
+        const bars = document.querySelectorAll('.bar');
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  if (scrollPosition >= 180) {
+    bars.forEach((bar) => {
+      bar.style.animation = 'grow 1s ease-out forwards';
+    });
+  }
+});
+
+
+
+
+
+// // 페이지가 로드될 때 스크롤이 1000 이상인 경우에도 애니메이션이 실행되도록 함
+// if (window.scrollY >= 1000) {
+//     element.style.animation = 'grow 1s forwards';
+// }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

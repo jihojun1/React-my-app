@@ -1,0 +1,384 @@
+@charset "utf-8";
+
+#wrap {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.way {
+    width: 1320px;
+    height: 40px;
+}
+
+.way ul li {
+    float: left;
+    color: #d3d3d3;
+}
+
+.way ul li img {
+    color: #d3d3d3;
+}
+
+.way ul li:first-child::after {
+    content: " >";
+    color: #d3d3d3;
+}
+
+.way ul li:nth-child(2)::after {
+    content: " > 재무정보";
+    color: #d3d3d3;
+}
+
+#box1 {
+    margin: 0 300px;
+}
+
+h1 {
+    width: 1320px;
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-family: 'Binggrae';
+}
+
+.com_navi li {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.com_navi li:first-child {
+    margin-left: 0;
+}
+
+.com_navi li:first-child a {
+    color: #fff;
+    display: block;
+    background-color: red;
+}
+
+.com_navi li a {
+    color: #000;
+    display: block;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #fbfbfb;
+    background-color: #f1f1f1;
+    border-radius: 50px;
+}
+
+.com_navi li a:hover {
+    color: #fff;
+    display: block;
+    background-color: red;
+}
+
+.container1 {
+    clear: both;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+.container1 h4,
+.container1 p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.container1 h4 {
+    color: #000;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'Binggrae';
+    font-size: 35px;
+}
+
+.container1 p {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.container1 ul {
+    border: 1px solid #eaeaea;
+    border-radius: 30px;
+    line-height: 50px;
+    width: 300px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container1 ul li {
+    float: left;
+    font-size: 15px;
+    margin-left: 35px;
+}
+
+.container1 ul li:first-child a {
+    border-right: 1px solid #eaeaea;
+    padding-right: 35px;
+    color: #000;
+}
+
+.container1 ul li a {
+    color: #8f8f8f;
+}
+
+
+
+
+
+
+
+
+.container2 {
+    text-align: center;
+}
+
+.container2 > h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-family: 'Binggrae';
+}
+
+.container2 .asset {
+    background-color: #f3f6e0;
+    margin-left: 30px;
+}
+
+.container2 .debt {
+    background-color: #eff6fa;
+}
+
+.container2 .capital {
+    background-color: #fcf4e5;
+}
+
+.total_box div {
+    border-radius: 30px;
+    width: 400px;
+    height: 150px;
+    float: left;
+    margin-right: 30px;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.total_box div:last-child {
+    margin-right: 0;
+}
+
+.total_box div h4 {
+    margin: 30px 0 15px 0;
+}
+
+.total_box div .counter {
+    font-size: 50px;
+}
+
+.total_box div span {
+    font-size: 15px;
+
+}
+
+.won {
+    position: absolute;
+    top: 85px;
+    left: 255px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+
+.bar_wrap {
+    width: 400px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    align-items: flex-end;
+    height: 150px;
+}
+
+
+.bar {
+    width: 50px;
+    margin-right: 30px;
+    background-color: #ccc;
+    position: relative;
+    left: 95px;
+    height: 0;
+    animation: none; /* 초기에는 애니메이션을 실행하지 않음 */
+  }
+
+.bar:last-child {
+    margin-right: 0;
+}
+
+.bar_text {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+    color: red;
+}
+
+.bar_text::after {
+    content: attr(data-value);
+}
+
+@keyframes grow {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: calc(var(--value) * 1px);
+    }
+}
+
+.graph_wrap{
+    margin-top: 350px;
+    border: 1px solid #eaeaea;
+    width: 1320px;
+    height: 260px;
+    border-radius: 30px;
+    margin-bottom: 250px;
+    position: relative;
+    box-shadow: rgba(121, 121, 121, 0.06) 0px 5px 10px 0px inset;
+    background-color: rgb(249, 249, 249);
+}
+
+.graph_wrap > p{
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    font-weight: bold;
+}
+
+.bar_wrap h4 {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    width: 370px;
+    height: 20px;
+}
+
+
+.year1 {
+    width: 400px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.year1 p {
+    float: left;
+    margin-right: 45px;
+}
+
+.year1 p:first-child {
+    margin-left: 102px;
+}
+
+.box_total {
+    border: 1px solid #eaeaea;
+    border-radius: 30px;
+    width: 400px;
+    height: 200px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: relative;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sheet {
+    clear: both;
+    width: 1320px;
+    height: 800px;
+}
+
+.sheet_head {
+    width: 1320px;
+    height: 20px;
+    margin-bottom: 50px;
+}
+
+.sheet_head h4 {
+    font-size: 40px;
+    float: left;
+    font-family: 'Binggrae';
+}
+
+.sheet_head p {
+    margin-top: 40px;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.table_box {
+    width: 1320px;
+    height: 672px;
+    text-align: center;
+    color: #595c59;
+}
+
+.table_box tr {
+    width: 1320px;
+    height: 84px;
+    border: 1px solid #eaeaea;
+    font-size: 18px;
+}
+
+.table_box tr {
+    line-height: 84px;
+}
+
+.year2 {
+    line-height: 100%;
+}
+
+.line2 {
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+.detail {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #8f8f8f;
+    line-height: 20px;
+}
+
+.table_box tr th{
+    width: 330px;
+}
+
+
+
+
+
+
+

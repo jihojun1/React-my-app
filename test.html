@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>카운터</title>
+    <style>
+      .counter {
+        display: inline-block;
+        font-size: 24px;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="counter" id="counter1">0</div>
+    <div class="counter" id="counter2">0</div>
+    <div class="counter" id="counter3">0</div>
+
+    <script>
+      function startCounter(elementId, endValue) {
+        let startValue = 0;
+        let duration = 3000;
+        let interval = setInterval(() => {
+          let currentValue = startValue + (endValue - startValue) * (Date.now() - startTime) / duration;
+          if (currentValue >= endValue) {
+            currentValue = endValue;
+            clearInterval(interval);
+          }
+          document.getElementById(elementId).textContent = Math.round(currentValue);
+        }, 10);
+        let startTime = Date.now();
+      }
+
+      window.onload = function() {
+        startCounter("counter1", 7602);
+        startCounter("counter2", 2023);
+        startCounter("counter3", 5578);
+      };
+    </script>
+  </body>
+</html>
